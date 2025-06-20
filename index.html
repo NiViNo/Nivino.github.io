@@ -37,6 +37,12 @@
     }
     .sidebar p {
       font-size: 0.9rem;
+      margin-bottom: 4px;
+    }
+    .sidebar .location {
+      font-size: 0.85rem;
+      color: #666;
+      margin-bottom: 10px;
     }
     .social-icons a {
       margin: 0 10px;
@@ -51,6 +57,18 @@
     iframe, .tableauPlaceholder {
       margin-bottom: 40px;
     }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+      margin-bottom: 50px;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
   </style>
 </head>
 
@@ -58,7 +76,8 @@
   <div class="sidebar">
     <img src="assets/img/nicolas.jpeg" alt="Nicolas Noak" />
     <h1>Nicolas Noak</h1>
-    <p>Data analyst & innovation researcher with a focus on strategy, startups, and venture ecosystems. Based in Berlin.</p>
+    <p>Data analyst & innovation researcher with a focus on strategy, startups, and venture ecosystems.</p>
+    <div class="location">Berlin, Germany</div>
     <div class="social-icons">
       <a href="https://www.linkedin.com/in/nicolas-noak-477767137"><i class="fab fa-linkedin-in"></i></a>
       <a href="https://github.com/NiViNo"><i class="fab fa-github"></i></a>
@@ -67,6 +86,7 @@
 
   <div class="main-content">
     <h2>Portfolio</h2>
+    <p>This page showcases selected work and data projects to visually complement my CV.</p>
 
     <section>
       <h3>Startup Network Explorer</h3>
@@ -115,6 +135,15 @@
     <section>
       <h3>Teaching & Facilitation</h3>
       <p>Lecturer at TU Berlin (2019–2024) for business planning and startup strategy. Developed and delivered interactive courses on venture finance, sustainability, and funding. 7x winners of the Berlin Business Plan Competition (BPW Study Track).</p>
+    </section>
+
+    <section>
+      <h3>Gallery</h3>
+      <div class="gallery">
+        <img src="assets/gallery/teaching1.jpg" alt="Teaching Session 1">
+        <img src="assets/gallery/pitch.jpg" alt="Final Pitch Moment">
+        <img src="assets/gallery/workshop.jpg" alt="Workshop Snapshot">
+      </div>
     </section>
   </div>
 
