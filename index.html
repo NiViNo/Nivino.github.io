@@ -10,102 +10,137 @@
   <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/css2?family=Publico+Text&display=swap" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet" />
-
-    
   <style>
-  body {
-    font-family: 'Publico Text', serif;
-    margin: 0;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-  }
-
-  .sidebar {
-    width: 280px;
-    background-color: #f8f9fa;
-    padding: 20px;
-    height: 100vh;
-    position: fixed;
-    overflow-y: auto;
-    text-align: center;
-  }
-
-  .sidebar img {
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-    margin-bottom: 10px;
-  }
-
-  .sidebar h1 {
-    font-size: 1.6rem;
-    margin: 10px 0 5px;
-  }
-
-  .sidebar p {
-    font-size: 0.9rem;
-    margin-bottom: 4px;
-  }
-
-  .sidebar .location {
-    font-size: 0.85rem;
-    color: #666;
-    margin-bottom: 10px;
-  }
-
-  .social-icons a {
-    margin: 0 10px;
-    font-size: 1.3rem;
-    color: #333;
-  }
-
-  .main-content {
-    margin-left: 300px;
-    padding: 40px 20px;
-    max-width: 900px;
-    width: 100%;
-  }
-
-  iframe,
-  .tableauPlaceholder {
-    margin-bottom: 40px;
-  }
-
-  .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 15px;
-    margin-top: 20px;
-    margin-bottom: 50px;
-  }
-
-  .gallery img {
-    width: 100%;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-  }
-
-  /* 🔧 Mobile fix */
-  @media (max-width: 768px) {
     body {
-      flex-direction: column;
+      font-family: 'Publico Text', serif;
+      margin: 0;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      background-color: #fdfdfd;
     }
 
     .sidebar {
-      position: relative;
-      width: 100%;
-      height: auto;
-      padding: 20px 10px;
-      border-bottom: 1px solid #ddd;
+      width: 280px;
+      background-color: #f8f9fa;
+      padding: 20px;
+      height: 100vh;
+      position: fixed;
+      overflow-y: auto;
+      text-align: center;
+      box-shadow: 2px 0 4px rgba(0, 0, 0, 0.05);
+    }
+
+    .sidebar img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    .sidebar h1 {
+      font-size: 1.6rem;
+      margin: 10px 0 5px;
+    }
+
+    .sidebar p {
+      font-size: 0.9rem;
+      margin-bottom: 4px;
+    }
+
+    .sidebar .location {
+      font-size: 0.85rem;
+      color: #666;
+      margin-bottom: 10px;
+    }
+
+    .social-icons a {
+      margin: 0 10px;
+      font-size: 1.3rem;
+      color: #333;
     }
 
     .main-content {
-      margin-left: 0;
-      padding: 20px 16px;
+      margin-left: 300px;
+      padding: 40px 20px;
+      max-width: 900px;
+      width: 100%;
     }
-  }
-</style>
+
+    .main-content h2 {
+      text-align: center;
+      margin-bottom: 5px;
+    }
+
+    .main-content p:first-of-type {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #444;
+      font-size: 1.05rem;
+    }
+
+    .main-content h3 {
+      text-align: center;
+      margin-top: 0;
+    }
+
+    section {
+      margin-bottom: 50px;
+    }
+
+    .section-box {
+      background-color: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 25px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+    }
+
+    iframe,
+    .tableauPlaceholder {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #eee;
+      margin: 40px 0;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: 20px 10px;
+        border-bottom: 1px solid #ddd;
+      }
+
+      .main-content {
+        margin-left: 0;
+        padding: 20px 16px;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -124,7 +159,7 @@
     <h2>Portfolio</h2>
     <p>This page showcases selected work and data projects to visually complement my CV.</p>
 
-    <section>
+    <section class="section-box">
       <h3>Startup Network Explorer</h3>
       <p>Interactive Shiny App – Crunchbase VC data (global)</p>
       <p>Mapped startup ecosystems based on co-investment and industry connections. Network clustering, trend filters, and centrality metrics enable deep ecosystem insights.</p>
@@ -133,7 +168,7 @@
       </div>
     </section>
 
-    <section>
+    <section class="section-box">
       <h3>Ecosystem Map Explorer</h3>
       <p>Tableau – Global startup investment flows and funding stages</p>
       <div class='tableauPlaceholder' id='viz1750413347205' style='position: relative; padding-bottom: 65%; height: 0; overflow: hidden; border: 1px solid #ccc; border-radius: 8px;'>
@@ -156,24 +191,24 @@
       </div>
     </section>
 
-    <section>
+    <section class="section-box">
       <h3>PhD Defense Presentation Slides</h3>
       <p>This presentation summarizes my doctoral research on entrepreneurial ecosystems and network dynamics (TU Berlin, 2025).</p>
       <iframe src="https://drive.google.com/file/d/1RYIsPDuNO5HZPErCA53hUi8Rg0EeYz6z/preview" width="100%" height="600px" style="border: none; border-radius: 8px;"></iframe>
     </section>
 
-    <section>
+    <section class="section-box">
       <h3>Research & Publications</h3>
       <p><strong>PhD Thesis:</strong> Entrepreneurial Ecosystems and Complex Networks – TU Berlin, 2025 (summa cum laude)</p>
       <p><strong>Journal Article:</strong> Small Business Economics (2025): <a href="https://doi.org/10.1007/s11187-025-01029-y">DOI:10.1007/s11187-025-01029-y</a></p>
     </section>
 
-    <section>
+    <section class="section-box">
       <h3>Teaching & Facilitation</h3>
       <p>Lecturer at TU Berlin (2019–2024) for business planning and startup strategy. Developed and delivered interactive courses on venture finance, sustainability, and funding. 7x winners of the Berlin Business Plan Competition (BPW Study Track).</p>
     </section>
 
-    <section>
+    <section class="section-box">
       <h3>Gallery</h3>
       <div class="gallery">
         <img src="assets/gallery/teaching1.jpg" alt="Teaching Session 1">
