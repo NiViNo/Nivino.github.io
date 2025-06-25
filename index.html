@@ -67,7 +67,9 @@ body {
 }
 
 .main-content {
+  grid-column: 2;
   padding: 40px 60px 40px 40px;
+  width: 100%;
   max-width: 1400px;
   box-sizing: border-box;
 }
@@ -159,6 +161,7 @@ hr {
   .main-content {
     padding: 20px 16px;
     width: 100%;
+    grid-column: auto; /* wieder alle Spalten belegen */
   }
   .section-box,
   .section-box h3,
