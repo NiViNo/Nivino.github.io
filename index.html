@@ -33,6 +33,7 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  z-index: 10;
 }
 .sidebar img {
   width: 140px;
@@ -60,9 +61,9 @@ body {
 }
 .main-content {
   margin-left: 300px;
-  padding: 40px 40px 40px 40px;
+  padding: 40px 60px 40px 40px;
   width: calc(100% - 300px);
-  max-width: none;
+  max-width: 1400px;
   box-sizing: border-box;
 }
 .main-content h2 {
@@ -85,14 +86,19 @@ body {
   background-color: #ffffff;
   border: 1px solid #ddd;
   border-radius: 8px;
-  padding: 25px;
+  padding: 25px 35px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  text-align: left;
+}
+.section-box h3,
+.section-box h4,
+.section-box p {
+  text-align: left;
 }
 .subsection-title {
   font-size: 1.2rem;
   font-weight: 600;
   margin-top: 30px;
-  text-align: center;
   text-transform: none;
 }
 iframe,
@@ -101,6 +107,7 @@ iframe,
   margin-bottom: 20px;
   border: none;
   border-radius: 8px;
+  width: 100%;
 }
 .gallery {
   display: grid;
@@ -135,6 +142,12 @@ hr {
     padding: 20px 16px;
     width: 100%;
   }
+  .section-box,
+  .section-box h3,
+  .section-box h4,
+  .section-box p {
+    text-align: center;
+  }
 }
 </style>
 </head>
@@ -157,12 +170,11 @@ hr {
   <section class="section-box">
     <h3>Data and Visualizations</h3>
     <div class="separator">---</div>
-
     <div>
       <h4 class="subsection-title">Startup Ecosystem Investment Explorer</h4>
       <p>This mockup visualization shows global funding statistics of startup ecosystems – as interactive map. Once an ecosystem is selected, it shows various investment information, such as development over time, funding distribution, and industry.</p>
       <div class="tableauPlaceholder">
-        <iframe src="https://public.tableau.com/views/StartupMapDemo/Dashboard1" style="width:100%; height:600px;"></iframe>
+        <iframe src="https://public.tableau.com/views/StartupMapDemo/Dashboard1" style="height:600px;"></iframe>
       </div>
       <hr />
       <h4 class="subsection-title">TrendExplorer</h4>
