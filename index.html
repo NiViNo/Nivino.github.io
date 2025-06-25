@@ -29,6 +29,10 @@ body {
   box-shadow: 2px 0 4px rgba(0, 0, 0, 0.05);
   left: 0;
   top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 .sidebar img {
   width: 140px;
@@ -66,23 +70,15 @@ body {
 }
 .main-content p:first-of-type {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
   color: #444;
   font-size: 1.05rem;
 }
-.main-content h4 {
+.separator {
   text-align: center;
   font-size: 1.2rem;
-  font-weight: normal;
-  margin-bottom: 20px;
-  color: #444;
-}
-.main-content h3 {
-  text-align: center;
-  margin-top: 0;
-}
-section {
-  margin-bottom: 50px;
+  color: #aaa;
+  margin: 10px 0 30px;
 }
 .section-box {
   background-color: #ffffff;
@@ -90,6 +86,13 @@ section {
   border-radius: 8px;
   padding: 25px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+.subsection-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 30px;
+  text-align: center;
+  text-transform: none;
 }
 iframe,
 .tableauPlaceholder {
@@ -112,8 +115,8 @@ iframe,
 }
 hr {
   border: none;
-  border-top: 1px solid #eee;
-  margin: 40px 0;
+  border-top: 1px solid #ddd;
+  margin: 30px 0;
 }
 @media (max-width: 768px) {
   body {
@@ -147,23 +150,25 @@ hr {
 <div class="main-content">
   <h2>Portfolio</h2>
   <p>This page showcases selected work and data projects to visually complement my CV.</p>
-  <hr />
-  <h4>Data and visualizations</h4>
+  <div class="separator">---</div>
 
   <section class="section-box">
-    <h3>Startup Ecosystem Investment Explorer</h3>
-    <p>This mockup visualization shows global funding statistics of startup ecosystems – as interactive map. Once an ecosystem is selected, it shows various investment information, such as development over time, funding distribution, and industry.</p>
-    <div class="tableauPlaceholder">
-      <iframe src="https://public.tableau.com/views/StartupMapDemo/Dashboard1" style="width:100%; height:600px;"></iframe>
-    </div>
-  </section>
+    <h3>Data and Visualizations</h3>
+    <div class="separator">---</div>
 
-  <section class="section-box">
-    <h3>TrendExplorer</h3>
-    <p>Interactive Shiny App – Global News Article Analytics (2010–2025)</p>
-    <p>TrendExplorer identifies emerging topics and tracks their evolution across clusters of co-occurring keywords. Built on 500+ news articles, it maps semantic networks, detects topic clusters, and forecasts their future relevance. Ideal for strategic foresight, innovation scouting, and agenda setting.</p>
-    <div style="position: relative; padding-bottom: 65%; height: 0; overflow: hidden; border-radius: 8px; border: 1px solid #ccc;">
-      <iframe src="https://nicolasvn.shinyapps.io/TrendExplorer/" style="position: absolute; top:0; left:0; width:100%; height:100%; border:0;" allowfullscreen loading="lazy"></iframe>
+    <div>
+      <h4 class="subsection-title">Startup Ecosystem Investment Explorer</h4>
+      <p>This mockup visualization shows global funding statistics of startup ecosystems – as interactive map. Once an ecosystem is selected, it shows various investment information, such as development over time, funding distribution, and industry.</p>
+      <div class="tableauPlaceholder">
+        <iframe src="https://public.tableau.com/views/StartupMapDemo/Dashboard1" style="width:100%; height:600px;"></iframe>
+      </div>
+      <hr />
+      <h4 class="subsection-title">TrendExplorer</h4>
+      <p>Interactive Shiny App – Global News Article Analytics (2010–2025)</p>
+      <p>TrendExplorer identifies emerging topics and tracks their evolution across clusters of co-occurring keywords. Built on 500+ news articles, it maps semantic networks, detects topic clusters, and forecasts their future relevance. Ideal for strategic foresight, innovation scouting, and agenda setting.</p>
+      <div style="position: relative; padding-bottom: 65%; height: 0; overflow: hidden; border-radius: 8px; border: 1px solid #ccc;">
+        <iframe src="https://nicolasvn.shinyapps.io/TrendExplorer/" style="position: absolute; top:0; left:0; width:100%; height:100%; border:0;" allowfullscreen loading="lazy"></iframe>
+      </div>
     </div>
   </section>
 
