@@ -66,9 +66,10 @@ body {
   max-width: 1400px;
   box-sizing: border-box;
 }
-.main-content h2 {
+.main-content h2,
+.section-box h3,
+.section-box h4 {
   text-align: center;
-  margin-bottom: 5px;
 }
 .main-content p:first-of-type {
   text-align: center;
@@ -88,18 +89,7 @@ body {
   border-radius: 8px;
   padding: 25px 35px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
-  text-align: left;
-}
-.section-box h3,
-.section-box h4,
-.section-box p {
-  text-align: left;
-}
-.subsection-title {
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin-top: 30px;
-  text-transform: none;
+  margin-bottom: 40px;
 }
 iframe,
 .tableauPlaceholder {
@@ -171,38 +161,56 @@ hr {
     <h3>Data and Visualizations</h3>
     <div class="separator">---</div>
     <div>
-      <h4 class="subsection-title">Startup Ecosystem Investment Explorer</h4>
+      <h4>Startup Ecosystem Investment Explorer</h4>
       <p>This mockup visualization shows global funding statistics of startup ecosystems – as interactive map. Once an ecosystem is selected, it shows various investment information, such as development over time, funding distribution, and industry.</p>
-      <div class="tableauPlaceholder">
-        <iframe src="https://public.tableau.com/views/StartupMapDemo/Dashboard1" style="height:600px;"></iframe>
+      <div class='tableauPlaceholder' id='viz1750868042285' style='position: relative'>
+        <noscript><a href='#'><img alt='Startup Ecosystems and Funding Stages ' src='https://public.tableau.com/static/images/Be/BerlinFunding/StartupEcosystemsandFundingStages/1_rss.png' style='border: none' /></a></noscript>
+        <object class='tableauViz' style='display:none;'>
+          <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+          <param name='embed_code_version' value='3' />
+          <param name='site_root' value='' />
+          <param name='name' value='BerlinFunding/StartupEcosystemsandFundingStages' />
+          <param name='tabs' value='no' />
+          <param name='toolbar' value='yes' />
+          <param name='static_image' value='https://public.tableau.com/static/images/Be/BerlinFunding/StartupEcosystemsandFundingStages/1.png' />
+          <param name='animate_transition' value='yes' />
+          <param name='display_static_image' value='yes' />
+          <param name='display_spinner' value='yes' />
+          <param name='display_overlay' value='yes' />
+          <param name='display_count' value='yes' />
+          <param name='language' value='en-US' />
+        </object>
       </div>
+      <script type='text/javascript'>
+        var divElement = document.getElementById('viz1750868042285');
+        var vizElement = divElement.getElementsByTagName('object')[0];
+        if (divElement.offsetWidth > 800) {
+          vizElement.style.width = '100%';
+          vizElement.style.maxWidth = '1350px';
+          vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+          vizElement.style.maxHeight = '987px';
+        } else if (divElement.offsetWidth > 500) {
+          vizElement.style.width = '100%';
+          vizElement.style.maxWidth = '1350px';
+          vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+          vizElement.style.maxHeight = '987px';
+        } else {
+          vizElement.style.width = '100%';
+          vizElement.style.height = '1627px';
+        }
+        var scriptElement = document.createElement('script');
+        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+        vizElement.parentNode.insertBefore(scriptElement, vizElement);
+      </script>
+
       <hr />
-      <h4 class="subsection-title">TrendExplorer</h4>
+      <h4>TrendExplorer</h4>
       <p>Interactive Shiny App – Global News Article Analytics (2010–2025)</p>
       <p>TrendExplorer identifies emerging topics and tracks their evolution across clusters of co-occurring keywords. Built on 500+ news articles, it maps semantic networks, detects topic clusters, and forecasts their future relevance. Ideal for strategic foresight, innovation scouting, and agenda setting.</p>
       <div style="position: relative; padding-bottom: 65%; height: 0; overflow: hidden; border-radius: 8px; border: 1px solid #ccc;">
         <iframe src="https://nicolasvn.shinyapps.io/TrendExplorer/" style="position: absolute; top:0; left:0; width:100%; height:100%; border:0;" allowfullscreen loading="lazy"></iframe>
       </div>
     </div>
-  </section>
-
-  <section class="section-box">
-    <h3>Lecturing and Workshops</h3>
-    <p>Some impressions of my work as consultant, lecturer and startup coach – teaching business and financial planning, sustainable business modelling, pitch readiness and startup strategy. I design hands-on learning formats, facilitate founder workshops and guide teams through their business planning process in university and incubator contexts.</p>
-    <div class="gallery">
-      <img src="assets/gallery/teaching1.jpg" alt="Teaching Session 1">
-      <img src="assets/gallery/pitch.jpg" alt="Final Pitch Moment">
-      <img src="assets/gallery/workshop.jpg" alt="Workshop Snapshot">
-    </div>
-  </section>
-
-  <section class="section-box">
-    <h3>Doctoral Dissertation</h3>
-    <p><strong>Summary Slides</strong></p>
-    <p>This presentation summarizes my doctoral research on entrepreneurial ecosystems and investment network dynamics (TU Berlin, 2025).</p>
-    <iframe src="https://drive.google.com/file/d/1RYIsPDuNO5HZPErCA53hUi8Rg0EeYz6z/preview" width="100%" height="600px"></iframe>
-    <p><strong>Publications</strong></p>
-    <p><strong>Journal Article:</strong> Small Business Economics (2025): <a href="https://doi.org/10.1007/s11187-025-01029-y">DOI:10.1007/s11187-025-01029-y</a></p>
   </section>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
