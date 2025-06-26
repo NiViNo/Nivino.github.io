@@ -241,87 +241,98 @@ vizElement.parentNode.insertBefore(scriptElement, vizElement);
 </div>
 </section>
 
-<section class="section-box">
+
+    <section class="section-box">
   <h3>Lecturing and Workshops</h3>
   <p>Some impressions of my work as consultant, lecturer and startup coach – teaching business and financial planning, sustainable business modelling, pitch readiness and startup strategy. I design hands-on learning formats, facilitate founder workshops and guide teams through their business planning process in university and incubator contexts.</p>
 
-  <div class="carousel">
-    <button class="carousel-btn prev">&#10094;</button>
-    <div class="carousel-images">
-      <img src="assets/gallery/pic1.jpeg" alt="Picture 1">
-      <img src="assets/gallery/pic2.jpeg" alt="Picture 2">
-      <img src="assets/gallery/pic3.jpeg" alt="Picture 3">
-      <img src="assets/gallery/pic4.jpeg" alt="Picture 4">
-      <img src="assets/gallery/pic5.jpeg" alt="Picture 5">
-      <img src="assets/gallery/pic6.jpeg" alt="Picture 6">
-    </div>
-    <button class="carousel-btn next">&#10095;</button>
+
+<div class="carousel-wrapper">
+  <div class="carousel-track">
+    <img src="assets/gallery/picture4.jpg" alt="Picture 4">
+          <img src="assets/gallery/picture3.jpg" alt="Picture 3">
+          <img src="assets/gallery/picture6.jpg" alt="Picture 6">
+          <img src="assets/gallery/picture2.jpg" alt="Picture 2">
+    <img src="assets/gallery/picture1.jpg" alt="Picture 1">
+    <img src="assets/gallery/picture5.jpg" alt="Picture 5">
+
   </div>
-</section>
+  <button class="carousel-btn prev">&#10094;</button>
+  <button class="carousel-btn next">&#10095;</button>
+</div>
 
 <style>
-.carousel {
+.carousel-wrapper {
   position: relative;
-  max-width: 600px;
-  margin: 20px auto;
+  width: 90%;
+  max-width: 900px;
+  margin: 30px auto;
   overflow: hidden;
-  border-radius: 8px;
-  border: 1px solid #ccc;
+  padding: 0 60px; /* adds side padding for peek */
+  box-sizing: border-box;
 }
 
-.carousel-images {
+.carousel-track {
   display: flex;
   transition: transform 0.5s ease;
 }
 
-.carousel-images img {
-  min-width: 100%;
-  max-height: 400px;
+.carousel-track img {
+  width: 80%; /* less than 100% to create peek */
+  margin: 0 10px;
+  border-radius: 8px;
+  flex-shrink: 0;
   object-fit: cover;
-  display: block;
+  max-height: 450px;
 }
 
 .carousel-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.8);
   border: none;
-  padding: 10px;
-  font-size: 24px;
+  font-size: 28px;
+  padding: 8px 14px;
   cursor: pointer;
   z-index: 5;
+  border-radius: 50%;
 }
 
 .carousel-btn.prev {
-  left: 10px;
+  left: 15px;
 }
+
 .carousel-btn.next {
-  right: 10px;
+  right: 15px;
 }
 </style>
 
-<script>
-let index = 0;
-const images = document.querySelectorAll(".carousel-images img");
-const total = images.length;
+    <script>
+let slideIndex = 0;
+const track = document.querySelector(".carousel-track");
+const slides = document.querySelectorAll(".carousel-track img");
+const slideWidth = slides[0].offsetWidth + 20; // image width + margin
 
-function updateCarousel() {
-  const track = document.querySelector(".carousel-images");
-  track.style.transform = "translateX(" + (-index * 100) + "%)";
+function updatePosition() {
+  track.style.transform = "translateX(" + (-slideIndex * slideWidth) + "px)";
 }
 
 document.querySelector(".carousel-btn.prev").addEventListener("click", () => {
-  index = (index - 1 + total) % total;
-  updateCarousel();
+  slideIndex = (slideIndex - 1 + slides.length) % slides.length;
+  updatePosition();
 });
 
 document.querySelector(".carousel-btn.next").addEventListener("click", () => {
-  index = (index + 1) % total;
-  updateCarousel();
+  slideIndex = (slideIndex + 1) % slides.length;
+  updatePosition();
 });
 
-updateCarousel();
+window.addEventListener("resize", () => {
+  updatePosition(); // recalculate on resize
+});
+
+updatePosition();
 </script>
 
 <section class="section-box">
