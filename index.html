@@ -265,6 +265,26 @@ hr {
     max-width: 98vw;
   }
 }
+    .dashboard-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Abstand zwischen den Bildern */
+  margin-top: 20px;
+}
+
+.dashboard-row img {
+  max-width: 45%;  /* steuert die Bildgröße, z. B. 2 nebeneinander */
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+@media (max-width: 800px) {
+  .dashboard-row img {
+    max-width: 100%; /* auf kleinen Screens untereinander */
+  }
+}
+
 </style>
 </head>
 
@@ -299,17 +319,18 @@ hr {
 </p>
 
 <div class="dashboard-image-box">
-
-  <img src="assets/img/powerbi_dashboard_1.png" alt="Power BI Dashboard 1" style="margin-top: 22px;" />
-  <hr style="margin: 25px auto; width: 80%; border: none; border-top: 1px solid #ccc;" />
-  <img src="assets/img/powerbi_dashboard_2.png" alt="Power BI Dashboard 2" />
-  <hr style="margin: 25px auto; width: 80%; border: none; border-top: 1px solid #ccc;" />
-  <img src="assets/img/powerbi_dashboard_3.png" alt="Power BI Dashboard 3" />
-
+  <div class="dashboard-row">
+    <img src="assets/img/powerbi_dashboard_1.png" alt="Power BI Dashboard 1" />
+    <img src="assets/img/powerbi_dashboard_2.png" alt="Power BI Dashboard 2" />
+  </div>
+  <div class="dashboard-row">
+    <img src="assets/img/powerbi_dashboard_3.png" alt="Power BI Dashboard 3" />
+  </div>
   <div style="margin-top: 22px; color: #678; font-size: 1rem;">
     <strong>Multiple KPI Views: Profit & Loss, Risk Exposure, Sector Breakdown (Power BI)</strong>
   </div>
 </div>
+
 
 
 <section class="section-box">
